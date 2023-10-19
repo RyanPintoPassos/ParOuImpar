@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Par ou Impar</title>
+    </head>
+    <body>
+        <h2>Escreva um número para saber se é Par ou Impar</h2>
+        <input type="number" id="numero">
+        <br>
+        <button onclick="calcular()">Calcular</button>
+        <p id="parimpar"></p>
+        <script>
+            function calcular(){
+                var numero = parseFloat(document.getElementById("numero").value);
+
+                if(numero === 0) {
+                    document.getElementById("parimpar").innerHTML = "NULL";
+                } else if (numero % 2 ===0) {
+                    if(numero > 0) {
+                        document.getElementById("parimpar").innerHTML = "EVEN POSITIVE";
+                    } else {
+                        document.getElementById("parimpar").innerHTML = "EVEN NEGATIVE";
+                    } 
+                    } else {
+                        if(numero > 0) {
+                            document.getElementById("parimpar").innerHTML = "ODD POSITIVE";
+                        } else {
+                            document.getElementById("parimpar").innerHTML = "ODD NEGATIVE"
+                        }
+                    }                
+            }
+        </script>
+    </body>
+</html>
